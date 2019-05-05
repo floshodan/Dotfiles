@@ -1,1 +1,28 @@
-"Vim RC
+ call plug#begin('~/.vim/plugged')               
+ Plug 'scrooloose/nerdtree'
+ Plug 'scrooloose/nerdcommenter'
+ Plug 'pangloss/vim-javascript'
+ Plug 'turbio/bracey.vim'
+ Plug 'ryanoasis/vim-devicons'
+ Plug '907th/vim-auto-save'
+ " call PlugInstall to install new plugins
+ call plug#end()
+
+ let g:auto_save=1
+ let g:NERDTree=1
+ " basics
+ filetype plugin indent on
+ syntax on set number
+ set relativenumber
+ set incsearch
+ set ignorecase
+ set smartcase
+ set nohlsearch
+ set tabstop=4
+ set softtabstop=0
+ set shiftwidth=4
+ set expandtab
+ set nobackup
+ set noswapfile
+ set nowrap
+ set encoding=UTF-8
