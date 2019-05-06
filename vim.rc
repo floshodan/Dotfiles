@@ -1,28 +1,42 @@
- call plug#begin('~/.vim/plugged')               
- Plug 'scrooloose/nerdtree'
- Plug 'scrooloose/nerdcommenter'
- Plug 'pangloss/vim-javascript'
- Plug 'turbio/bracey.vim'
- Plug 'ryanoasis/vim-devicons'
- Plug '907th/vim-auto-save'
- " call PlugInstall to install new plugins
- call plug#end()
+" call PlugInstall to install new plugins
+call plug#end()
 
- let g:auto_save=1
- let g:NERDTree=1
- " basics
- filetype plugin indent on
- syntax on set number
- set relativenumber
- set incsearch
- set ignorecase
- set smartcase
- set nohlsearch
- set tabstop=4
- set softtabstop=0
- set shiftwidth=4
- set expandtab
- set nobackup
- set noswapfile
- set nowrap
- set encoding=UTF-8
+let g:auto_save=1
+let g:NERDTree=1
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 0
+
+"--Autocompletion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+" basics
+filetype plugin indent on
+syntax on set number
+set relativenumber
+set incsearch
+set ignorecase
+set smartcase
+set nohlsearch
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
+set nobackup
+set noswapfile
+set nowrap
+set encoding=UTF-8
+
+function! JumpToCSS()
+  let id_pos = searchpos("id", "nb", line('.'))[1]
+  let class_pos = searchpos("class", "nb", line('.'))[1]
+
+  if class_pos > 0 || id_pos > 0
+    if class_pos < id_pos
+      execute ":vim '#".expand('<cword>')."' **/*.css"
+    elseif class_pos > id_pos
+      execute ":vim '.".expand('<cword>')."' **/*.css"
+    endif
+  endif
+endfunction
+
+nnoremap <F9> :call JumpToCSS()<CR>
