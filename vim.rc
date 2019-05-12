@@ -1,4 +1,5 @@
 " call PlugInstall to install new plugins
+Plug 'github.io'
 call plug#end()
 
 let g:auto_save=1
