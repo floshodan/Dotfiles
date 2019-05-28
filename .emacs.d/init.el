@@ -25,6 +25,9 @@
 (require 'powerline)
 (powerline-center-evil-theme)
 
+(require 'nlinum-relative)
+(nlinum-relative mode)
+
 ;;load theme
 (load-theme 'solarized-dark t)
 
