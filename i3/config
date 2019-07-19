@@ -35,3 +35,5 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+
+exec --no-startup-id feh --background /home/flo/Pictures
