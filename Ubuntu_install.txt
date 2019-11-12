@@ -44,7 +44,7 @@ cd polybar && ./build.sh
 
 #utils
 sudo apt install rxvt-unicode glances htop zsh tmux feh
-sudo apt-get install powerline fonts-powerline zathura kazam ranger rofi xclip
+sudo apt-get install powerline fonts-powerline zathura kazam ranger rofi xclip firefox chromium-browser
 
 sudo usermod -s /usr/bin/zsh $(whoami)
 sudo chsh -s $(which zsh) #for root
