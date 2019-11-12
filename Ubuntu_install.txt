@@ -46,6 +46,10 @@ cd polybar && ./build.sh
 sudo apt install rxvt-unicode glances htop zsh tmux feh
 sudo apt-get install powerline fonts-powerline zathura kazam ranger rofi xclip firefox chromium-browser
 
+#Xdefaults urxvt
+xrdb -merge ~/.Xdefaults
+https://github.com/majutsushi/urxvt-font-size
+
 sudo usermod -s /usr/bin/zsh $(whoami)
 sudo chsh -s $(which zsh) #for root
 #oh-my-zsh
