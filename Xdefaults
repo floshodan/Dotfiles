@@ -4,7 +4,7 @@ urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0200/c800
 
 !font settings
-URxvt*font: xft:Source Code Pro:size=14
+URxvt*font: xft:Source Code Pro:size=14, xft:Font Awesome 5 Free:size=14
 
 
 ! scrollbar is ugly
@@ -51,4 +51,3 @@ URxvt*scrollBar: false
 !extention
 ! https://github.com/majutsushi/urxvt-font-size
 URxvt.perl-ext-common: font-size, selection-to-clipboard
-
